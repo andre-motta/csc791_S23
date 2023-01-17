@@ -19,6 +19,7 @@ namespace TestHomeworks
             Console.WriteLine("{0}, {1}", num.Mid(), num.Div());
             Debug.Assert((num.Mid() - 1.5714285714285714) < 0.01 && (num.Div() - 0.787) < 0.01);
             Console.WriteLine("Pass: num");
+
         }
 
         [TestMethod]
