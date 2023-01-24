@@ -1,4 +1,4 @@
-﻿using Homeworks.Hw2;
+﻿using Homeworks.src.Hw3;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,10 +7,14 @@ namespace Homeworks
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            var data = new Data("file", "../netcoreapp3.1/Hw2/auto93.csv");
-            data.Stats();
+            Settings.ReadCli(args);
+            
+            Settings.WriteOptions(args);
+
+            return TestEngine.RunTests();
+
         }
     }
 }

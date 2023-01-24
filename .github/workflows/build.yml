@@ -20,5 +20,7 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release --no-restore
-      - name: Test
-        run: cd ./Homeworks; dotnet run
+      - name: Test with custom engine
+        run: cd ./Homeworks; dotnet run -g hw3
+        name: Test with UnitTests
+        run: dotnet test --no-restore --verbosity normal

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Homeworks.Hw2
+namespace Homeworks.src.Hw3
 {
     public class Col
     {
@@ -56,6 +56,30 @@ namespace Homeworks.Hw2
                 {
                     Sym.Add(value);
                 }
+            }
+        }
+
+        public Tuple<bool, double, string> Norm(string value)
+        {
+            if (IsNum && value != "?")
+            {
+                return new Tuple<bool, double, string>(true, Num.Norm(value), null);
+            }
+            else
+            {
+                return new Tuple<bool, double, string>(false, 0, value);
+            }
+        }
+
+        public double Distance(string s1, string s2)
+        {
+            if (IsNum)
+            {
+                return Num.Distance(s1, s2);
+            }
+            else
+            {
+                return Sym.Distance(s1, s2);
             }
         }
     }

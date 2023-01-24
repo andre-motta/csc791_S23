@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Homeworks.Hw1
+namespace Homeworks.src.Hw1
 {
     public class Sym
     {

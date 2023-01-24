@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Homeworks.Hw2
+namespace Homeworks.src.Hw3
 {
     public class Num
     {
@@ -49,6 +49,31 @@ namespace Homeworks.Hw2
         public double Div()
         {
             return Math.Pow((Moment / (Len - 1)), 0.5);
+        }
+
+        public double Round(double x, int n)
+        {
+            return Math.Round(x, n);
+        }
+
+        public double Norm(string val)
+        {
+            if(val != "?")
+            {
+                var n = double.Parse(val);
+                return (n - Low) / (High - Low - 1E-32);
+            }
+            return float.NegativeInfinity;
+        }
+
+        public double Distance(string s1, string s2)
+        {
+            if (s1 == "?" && s2 == "?") return 1;
+            var n1 = Norm(s1);
+            var n2 = Norm(s2);
+            if (s1 == "?") n1 = n2 < 0.5 ? 1 : 0;
+            if (s2 == "?") n2 = n1 < 0.5 ? 1 : 0;
+            return Math.Abs(n1 - n2);
         }
     }
 }

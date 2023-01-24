@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace Homeworks.Hw2
+namespace Homeworks.src.Hw2
 {
     public static class TestEngine
     {

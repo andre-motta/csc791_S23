@@ -2,15 +2,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
-namespace Homeworks.Hw2
+namespace Homeworks.src.Hw3
 {
     public static class Csv
     {
         public static Tuple<List<string>,List<ArrayList>> Read (string filename)
         {
-            var path = filename;
+            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filename);
             using (TextFieldParser csvParser = new TextFieldParser(path))
             {
                 csvParser.CommentTokens = new string[] { "#" };

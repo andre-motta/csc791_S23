@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Homeworks.Hw2
+namespace Homeworks.src.Hw3
 {
     public class Sym
     {
@@ -65,6 +65,16 @@ namespace Homeworks.Hw2
                 }
             }
             return Entropy;
+        }
+
+        public string Round(string x, int n)
+        {
+            return x;
+        }
+
+        public double Distance(string s1, string s2)
+        {
+            return (s1 == s2 ? 1 : (s1 == s2 ? 0 : 1));
         }
     }
 }

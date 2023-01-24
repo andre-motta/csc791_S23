@@ -6,9 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Hw2\auto93.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Update="etc\data\auto93.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="etc\out\" />
   </ItemGroup>
 
 </Project>
